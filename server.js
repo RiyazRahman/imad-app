@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 
 
 var articles={ 
-'article-one ':{
+'article-one':{
     title: 'Article one | Riyaz Rahman',
     heading:'Article One',
     date:'Agust 17 2017',
@@ -46,7 +46,7 @@ var articles={
 
 function createTemplate (data)
 {
-    var title=data.title;
+    var title = data.title;
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
