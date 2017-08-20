@@ -3,7 +3,7 @@ var button = document.getElementById('counter');
 var counter=0;
 
 button.onclick = function (){
-  //Make arequest to the counter end point
+  //Create a request object
   var request=new XMLHttpRequest();
 
 
@@ -22,6 +22,7 @@ button.onclick = function (){
       
       //Not done yet
   };
- 
-
+ //Make the request
+request.open('Get', 'http://riyazrayyan07.imad.hasura-app.io/counter',true);
+request.send(null);
 };
