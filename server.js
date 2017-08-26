@@ -54,7 +54,7 @@ var articles={
 
 function createTemplate (data)
 {
-
+    var title = data.title;
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
@@ -130,10 +130,7 @@ app.get('/submit-name/', function (req, res) {//URL: /submit-name?name=RRRR
     
 });
 
-app.get('/:articleName',function(req,res){
-    var articleName = req.params.articleName;
-res.send(createTemplate(articles[articleName]));
-});
+
 app.get('/article-two',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'article-two.html')); 
 });
